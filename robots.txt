@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dhaval1mak.github.io/AppStream/sitemap.xml

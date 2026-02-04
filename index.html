@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AppStream — All Apps | Meditation, AI & Games</title>
+  <meta name="description" content="AppStream lists Breath (Meditation & Wellness), Empathy AI, and Game Zone (2 Player Games). Discover and track our apps in closed testing.">
+  <meta name="keywords" content="AppStream, Breath meditation, Empathy AI, Game Zone, 2 player games, wellness app, Android apps">
+  <meta name="author" content="AppStream">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dhaval1mak.github.io/AppStream/">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dhaval1mak.github.io/AppStream/">
+  <meta property="og:title" content="AppStream — All Apps">
+  <meta property="og:description" content="Breath, Empathy AI, Game Zone. For all apps listing.">
+  <meta property="og:image" content="https://dhaval1mak.github.io/AppStream/og-image.png">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="AppStream">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AppStream — All Apps">
+  <meta name="twitter:description" content="Breath, Empathy AI, Game Zone. For all apps listing.">
+  <meta name="twitter:image" content="https://dhaval1mak.github.io/AppStream/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "AppStream",
+        "url": "https://dhaval1mak.github.io/AppStream/",
+        "description": "For all apps listing. Breath, Empathy AI, Game Zone.",
+        "publisher": { "@type": "Organization", "name": "AppStream" }
+      },
+      {
+        "@type": "ItemList",
+        "name": "AppStream Apps",
+        "description": "List of apps",
+        "numberOfItems": 3,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Breath — Meditation & Wellness", "url": "https://dhaval1mak.github.io/AppStream/apps/breath/" },
+          { "@type": "ListItem", "position": 2, "name": "Empathy AI", "url": "https://dhaval1mak.github.io/AppStream/apps/empathy-ai/" },
+          { "@type": "ListItem", "position": 3, "name": "Game Zone — 2 Player Games", "url": "https://dhaval1mak.github.io/AppStream/apps/game-zone/" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --surface: #1a1a1a;
+      --surface-hover: #242424;
+      --text: #f5f5f5;
+      --text-muted: #a3a3a3;
+      --accent: #22c55e;
+      --accent-soft: rgba(34, 197, 94, 0.15);
+      --border: #2a2a2a;
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .logo {
+      font-family: 'Fraunces', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .tagline {
+      color: var(--text-muted);
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .apps {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .app-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .app-card:hover {
+      background: var(--surface-hover);
+      border-color: #333;
+    }
+
+    .app-card-main {
+      color: inherit;
+      text-decoration: none;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .play-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 1rem;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+
+    .play-link:hover {
+      opacity: 0.95;
+      transform: translateY(-1px);
+    }
+
+    .play-link:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    .app-info h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .app-id {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .stat {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    @media (max-width: 640px) {
+      .play-link { width: 100%; }
+
+      .page {
+        padding: 2rem 1rem 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1 class="logo">AppStream</h1>
+      <p class="tagline">For all apps listing</p>
+    </header>
+
+    <section class="apps" aria-label="Apps list">
+      <article class="app-card">
+        <a href="apps/breath/" class="app-card-main" title="Breath — Meditation & Wellness">
+          <div class="app-info">
+            <h2>Breath — Meditation & Wellness</h2>
+            <div class="app-id">com.dhaval29.breath</div>
+            <div class="meta">
+              <span class="stat">0</span>
+              <span><span class="badge">Closed testing</span></span>
+              <span>Feb 4, 2026</span>
+            </div>
+          </div>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.dhaval29.breath" class="play-link" target="_blank" rel="noopener noreferrer" title="Get Breath on Google Play">Google Play</a>
+      </article>
+
+      <article class="app-card">
+        <a href="apps/empathy-ai/" class="app-card-main" title="Empathy AI">
+          <div class="app-info">
+            <h2>Empathy AI</h2>
+            <div class="app-id">com.brilworksdigital.VoxAi</div>
+            <div class="meta">
+              <span class="stat">5</span>
+              <span><span class="badge">Closed testing</span></span>
+              <span>Feb 2, 2026</span>
+            </div>
+          </div>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.brilworksdigital.VoxAi" class="play-link" target="_blank" rel="noopener noreferrer" title="Get Empathy AI on Google Play">Google Play</a>
+      </article>
+
+      <article class="app-card">
+        <a href="apps/game-zone/" class="app-card-main" title="Game Zone — 2 Player Games">
+          <div class="app-info">
+            <h2>Game Zone — 2 Player Games</h2>
+            <div class="app-id">com.dhaval.twoplayergames</div>
+            <div class="meta">
+              <span class="stat">0</span>
+              <span><span class="badge">Closed testing</span></span>
+              <span>Feb 3, 2026</span>
+            </div>
+          </div>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.dhaval.twoplayergames" class="play-link" target="_blank" rel="noopener noreferrer" title="Get Game Zone on Google Play">Google Play</a>
+      </article>
+    </section>
+  </div>
+  <script src="js/config.js"></script>
+  <script src="js/analytics.js"></script>
+</body>
+</html>
