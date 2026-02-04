@@ -3,71 +3,616 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Empathy AI | AppStream</title>
-  <meta name="description" content="Empathy AI app. Currently in closed testing. Package: com.brilworksdigital.VoxAi.">
-  <meta name="keywords" content="Empathy AI, VoxAi, AI app, Android app, com.brilworksdigital.VoxAi">
+  <title>Empathy AI - Your Compassionate AI Companion</title>
+  <meta name="description" content="Empathy Counselors: Your 24/7 AI companion for emotional wellness and mental health support. Chat with intelligent, personalized counselors.">
+  <meta name="keywords" content="Empathy AI, mental health chatbot, AI counselor, emotional support, anxiety help, therapy app, wellness tracker, loneliness, stress relief">
   <meta name="author" content="AppStream">
-  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1a0b2e">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="canonical" href="https://dhaval1mak.github.io/AppStream/apps/empathy-ai/">
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dhaval1mak.github.io/AppStream/apps/empathy-ai/">
-  <meta property="og:title" content="Empathy AI">
-  <meta property="og:description" content="Empathy AI app. Closed testing.">
+  <meta property="og:title" content="Empathy AI - Your Compassionate AI Companion">
+  <meta property="og:description" content="Available 24/7 whenever you need someone to talk to. Intelligent chat, personalized counselors, and comprehensive wellness tools.">
   <meta property="og:image" content="https://dhaval1mak.github.io/AppStream/og-image.png">
+  <meta property="og:site_name" content="Empathy AI">
   <meta property="og:locale" content="en_US">
-  <meta property="og:site_name" content="AppStream">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Empathy AI">
-  <meta name="twitter:description" content="Empathy AI app. Closed testing.">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://dhaval1mak.github.io/AppStream/apps/empathy-ai/">
+  <meta name="twitter:title" content="Empathy AI - Mental Health & Wellness Support">
+  <meta name="twitter:description" content="Never face difficult moments alone. AI-powered empathy counselors providing immediate, judgment-free support.">
+  <meta name="twitter:image" content="https://dhaval1mak.github.io/AppStream/og-image.png">
+
+  <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Empathy AI",
-    "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "Android",
-    "description": "Empathy AI app.",
+    "applicationCategory": "HealthApplication",
+    "description": "AI-powered compassion counselors for emotional wellness and mental health support.",
     "url": "https://dhaval1mak.github.io/AppStream/apps/empathy-ai/",
-    "softwareVersion": "Closed testing",
-    "datePublished": "2026-02-02",
-    "identifier": { "@type": "PropertyValue", "propertyID": "Android package", "value": "com.brilworksdigital.VoxAi" },
-    "downloadUrl": "https://play.google.com/store/apps/details?id=com.brilworksdigital.VoxAi"
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": "Intelligent chat, Anxiety detector, Stress indicator, Mood tracking, Social battery checker",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.brilworksdigital.VoxAi",
+    "author": {
+      "@type": "Organization",
+      "name": "AppStream"
+    }
   }
   </script>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
   <style>
-    :root { --bg: #0f0f0f; --surface: #1a1a1a; --text: #f5f5f5; --text-muted: #a3a3a3; --accent: #22c55e; --accent-soft: rgba(34, 197, 94, 0.15); --border: #2a2a2a; --radius: 16px; }
+    :root {
+      --bg: #0f0a15;
+      --bg-gradient: radial-gradient(circle at 10% 20%, rgba(168, 85, 247, 0.15), transparent 40%),
+                     radial-gradient(circle at 90% 80%, rgba(236, 72, 153, 0.1), transparent 40%);
+      --surface: rgba(255, 255, 255, 0.03);
+      --surface-hover: rgba(255, 255, 255, 0.06);
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: #a855f7; /* Purple-500 */
+      --primary-gradient: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+      --secondary: #d946ef;
+      --accent: #22d3ee;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --glow: 0 0 20px rgba(168, 85, 247, 0.3);
+    }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'DM Sans', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.5; }
-    .page { max-width: 960px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
-    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-muted); text-decoration: none; font-size: 0.9rem; margin-bottom: 2rem; }
-    .back-link:hover { color: var(--text); }
-    header { margin-bottom: 2rem; }
-    .logo { font-family: 'Fraunces', serif; font-size: 1.75rem; font-weight: 600; margin-bottom: 0.5rem; }
-    .app-id { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; }
-    .badge { display: inline-block; background: var(--accent-soft); color: var(--accent); font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.6rem; border-radius: 6px; text-transform: uppercase; }
-    .meta { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem; }
-    .play-cta { margin-top: 1.5rem; }
-    .play-cta a { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.25rem; background: var(--accent); color: #fff; font-weight: 600; border-radius: 10px; text-decoration: none; transition: opacity 0.2s; }
-    .play-cta a:hover { opacity: 0.95; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background-color: var(--bg);
+      background-image: var(--bg-gradient);
+      background-attachment: fixed;
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Outfit', sans-serif;
+      line-height: 1.25;
+    }
+
+    a { text-decoration: none; color: inherit; transition: 0.3s ease; }
+    ul { list-style: none; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Header */
+    header {
+      padding: 1.5rem 0;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+    }
+    
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      backdrop-filter: blur(10px);
+      padding: 0.5rem 1rem;
+      border-radius: 99px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+    }
+
+    .back-link:hover {
+      background: var(--surface-hover);
+      color: var(--text);
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      padding-top: 180px;
+      padding-bottom: 100px;
+      overflow: hidden;
+      text-align: center;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: var(--primary);
+      filter: blur(160px);
+      opacity: 0.12;
+      z-index: -1;
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .app-logo-wrapper {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 2rem;
+      border-radius: 30px;
+      background: rgba(168, 85, 247, 0.1);
+      border: 1px solid rgba(168, 85, 247, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 40px rgba(168, 85, 247, 0.2);
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    .app-logo-icon {
+      width: 64px;
+      height: 64px;
+      filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.5));
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, #fff, #e9d5ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--primary-gradient);
+      color: white;
+      font-weight: 700;
+      padding: 1rem 2.5rem;
+      border-radius: 99px;
+      font-size: 1.1rem;
+      box-shadow: var(--glow);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 35px rgba(168, 85, 247, 0.5);
+    }
+    
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,255,255,0.03);
+      padding: 0.5rem 1rem;
+      border-radius: 99px;
+      border: 1px solid var(--border);
+    }
+    
+    .stat-item i { color: var(--secondary); }
+
+    /* Features Grid */
+    .features-section {
+      padding: 80px 0;
+      background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.2));
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .feature-card:hover {
+      border-color: rgba(168, 85, 247, 0.3);
+      transform: translateY(-5px);
+      background: var(--surface-hover);
+    }
+    
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      background: rgba(168, 85, 247, 0.1);
+      color: var(--primary);
+    }
+
+    .feature-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .feature-desc {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Tools List */
+    .tools-list {
+      margin-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+    }
+
+    .tool-item {
+      display: flex;
+      align-items: start;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .tool-icon {
+      color: var(--accent);
+      margin-top: 2px;
+    }
+
+    /* Who is this for Section */
+    .audience-section {
+      padding: 80px 0;
+      background: rgba(168, 85, 247, 0.03);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .audience-content h3 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+
+    .audience-list {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .audience-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1.1rem;
+      padding: 1rem;
+      background: var(--surface);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .check-circle {
+      width: 24px;
+      height: 24px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    /* Important Note */
+    .note-section {
+      padding: 60px 0;
+      text-align: center;
+    }
+    
+    .note-box {
+      background: rgba(234, 179, 8, 0.1);
+      border: 1px solid rgba(234, 179, 8, 0.2);
+      border-radius: 16px;
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .note-title {
+      color: #facc15;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+    }
+
+    /* Footer */
+    footer {
+      padding: 60px 0 30px;
+      background: #050308;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-logo {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+    
+    .copyright {
+      color: #555;
+      font-size: 0.85rem;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
+      .audience-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .hero-stats { flex-direction: column; gap: 1rem; }
+    }
   </style>
 </head>
 <body>
-  <div class="page">
-    <nav><a class="back-link" href="../../">← All apps</a></nav>
-    <header>
-      <h1 class="logo">Empathy AI</h1>
-      <div class="app-id">com.brilworksdigital.VoxAi</div>
-      <span class="badge">Closed testing</span>
-      <div class="meta">Feb 2, 2026 · 5</div>
-      <div class="play-cta">
-        <a href="https://play.google.com/store/apps/details?id=com.brilworksdigital.VoxAi" target="_blank" rel="noopener noreferrer" title="Get Empathy AI on Google Play">Get it on Google Play</a>
+
+  <header>
+    <div class="container nav-content">
+      <a href="../../" class="back-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+        All Apps
+      </a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="app-logo-wrapper">
+        <img src="images/favicon.svg" alt="Empathy AI Logo" class="app-logo-icon">
       </div>
-    </header>
-  </div>
-  <script src="../../js/config.js"></script>
-  <script src="../../js/analytics.js"></script>
+      
+      <h1>Empathy Counselors</h1>
+      <p>Your compassionate AI companion for emotional wellness and mental health support, available 24/7 whenever you need someone to talk to.</p>
+      
+      <div class="cta-wrapper">
+        <a href="https://play.google.com/store/apps/details?id=com.brilworksdigital.VoxAi" target="_blank" class="download-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+          Download on Google Play
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item"><span>🌙 24/7 Support</span></div>
+        <div class="stat-item"><span>🔒 Private & Secure</span></div>
+        <div class="stat-item"><span>🤖 Intelligent Chat</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Comprehensive Support</h2>
+        <p class="section-desc">Advanced tools tailored to your emotional needs.</p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Intelligent Chat -->
+        <div class="feature-card">
+          <div class="feature-icon">💬</div>
+          <h3 class="feature-title">Intelligent Chat</h3>
+          <p class="feature-desc">Engage in meaningful conversations with trained AI counselors that understand context and respond to your emotional state.</p>
+        </div>
+
+        <!-- Personal Counselors -->
+        <div class="feature-card">
+          <div class="feature-icon">🎭</div>
+          <h3 class="feature-title">Personalized Counselors</h3>
+          <p class="feature-desc">Choose from multiple personalities with unique communication styles. Find the counselor that resonates with you.</p>
+        </div>
+
+        <!-- Wellness Tools -->
+        <div class="feature-card" style="grid-row: span 2;">
+          <div class="feature-icon">🛠️</div>
+          <h3 class="feature-title">Wellness Toolkit</h3>
+          <p class="feature-desc">A complete suite of tools to monitor and improve your mental health.</p>
+          <div class="tools-list">
+            <div class="tool-item"><span class="tool-icon">⚡</span> Anxiety Pattern Detector</div>
+            <div class="tool-item"><span class="tool-icon">📊</span> Stress Level Indicator</div>
+            <div class="tool-item"><span class="tool-icon">🌤️</span> Emotional Weather Check</div>
+            <div class="tool-item"><span class="tool-icon">🔋</span> Social Battery Checker</div>
+            <div class="tool-item"><span class="tool-icon">🤝</span> Loneliness Checker</div>
+          </div>
+        </div>
+
+        <!-- Progress Tracking -->
+        <div class="feature-card">
+          <div class="feature-icon">📈</div>
+          <h3 class="feature-title">Track Progress</h3>
+          <p class="feature-desc">View your emotional journey with history tracking, empathy scores, and personalized insights.</p>
+        </div>
+
+        <!-- Specialized Support -->
+        <div class="feature-card">
+          <div class="feature-icon">🧭</div>
+          <h3 class="feature-title">Specialized Support</h3>
+          <p class="feature-desc">Structured guidance for breakup recovery, life transitions, and analyzing complex thoughts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="audience-section">
+    <div class="container audience-grid">
+      <div class="audience-content">
+        <h3>Who Is This For?</h3>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">If you need someone to talk to, anytime and anywhere, without judgment.</p>
+        
+        <div class="audience-list">
+          <div class="audience-item">
+            <div class="check-circle">✓</div>
+            <span>Anyone feeling lonely or isolated</span>
+          </div>
+          <div class="audience-item">
+            <div class="check-circle">✓</div>
+            <span>People dealing with anxiety or stress</span>
+          </div>
+          <div class="audience-item">
+            <div class="check-circle">✓</div>
+            <span>Navigating difficult life transitions</span>
+          </div>
+          <div class="audience-item">
+            <div class="check-circle">✓</div>
+            <span>Seeking support outside therapy</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="audience-image">
+         <div style="background: radial-gradient(circle at center, rgba(168, 85, 247, 0.1), transparent); border-radius: 24px; padding: 2rem; border: 1px solid var(--border); text-align: center;">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">📚</div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Educational Resources</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">Access our comprehensive blog with articles on coping strategies, recovery, and understanding your emotions.</p>
+            <div style="display: grid; gap: 0.5rem; text-align: left; color: var(--text-muted); font-size: 0.9rem;">
+              <div>• Understanding anxiety vs. stress</div>
+              <div>• Coping with social isolation</div>
+              <div>• First-year college challenges</div>
+            </div>
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="note-section">
+    <div class="container">
+      <div class="note-box">
+        <div class="note-title">Important Note</div>
+        <p style="color: var(--text-muted);">Empathy Counselors isn't a replacement for professional therapy, but a supportive companion for your mental wellness journey. Whether you need immediate support or simply need someone to listen, we're here to help you feel less alone.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-logo">Empathy AI</div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="mailto:support@appstream.me">Contact Support</a>
+      </div>
+      <p class="copyright">Made with ❤️ for emotional wellness. &copy; 2026 AppStream</p>
+    </div>
+  </footer>
+
 </body>
 </html>

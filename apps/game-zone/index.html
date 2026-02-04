@@ -3,71 +3,593 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Game Zone — 2 Player Games | AppStream</title>
-  <meta name="description" content="Game Zone offers 2 player games. Currently in closed testing. Package: com.dhaval.twoplayergames.">
-  <meta name="keywords" content="Game Zone, 2 player games, multiplayer games, Android app, com.dhaval.twoplayergames">
-  <meta name="author" content="AppStream">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://dhaval1mak.github.io/AppStream/apps/game-zone/">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://dhaval1mak.github.io/AppStream/apps/game-zone/">
-  <meta property="og:title" content="Game Zone — 2 Player Games">
-  <meta property="og:description" content="2 player games. Closed testing.">
-  <meta property="og:image" content="https://dhaval1mak.github.io/AppStream/og-image.png">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:site_name" content="AppStream">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Game Zone — 2 Player Games">
-  <meta name="twitter:description" content="2 player games. Closed testing.">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Game Zone — 2 Player Games",
-    "applicationCategory": "GameApplication",
-    "operatingSystem": "Android",
-    "description": "2 player games.",
-    "url": "https://dhaval1mak.github.io/AppStream/apps/game-zone/",
-    "softwareVersion": "Closed testing",
-    "datePublished": "2026-02-03",
-    "identifier": { "@type": "PropertyValue", "propertyID": "Android package", "value": "com.dhaval.twoplayergames" },
-    "downloadUrl": "https://play.google.com/store/apps/details?id=com.dhaval.twoplayergames"
-  }
-  </script>
+  <title>Game Zone - The Ultimate 2-Player Games Collection</title>
+  <meta name="description" content="Play classic offline games with your friends and family. Tic Tac Toe, Connect Four, Dots & Boxes. No internet required, no ads, just pure gaming fun!">
+  <meta name="theme-color" content="#0f0f13">
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
   <style>
-    :root { --bg: #0f0f0f; --surface: #1a1a1a; --text: #f5f5f5; --text-muted: #a3a3a3; --accent: #22c55e; --accent-soft: rgba(34, 197, 94, 0.15); --border: #2a2a2a; --radius: 16px; }
+    :root {
+      --bg: #030305;
+      --bg-gradient: radial-gradient(circle at 15% 50%, rgba(76, 29, 149, 0.15), transparent 25%),
+                     radial-gradient(circle at 85% 30%, rgba(236, 72, 153, 0.15), transparent 25%);
+      --surface: rgba(255, 255, 255, 0.03);
+      --surface-hover: rgba(255, 255, 255, 0.06);
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #ffffff;
+      --text-muted: #9ca3af;
+      --primary: #8b5cf6;
+      --primary-gradient: linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%);
+      --secondary: #06b6d4;
+      --accent: #f43f5e;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --glow: 0 0 20px rgba(139, 92, 246, 0.3);
+    }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'DM Sans', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.5; }
-    .page { max-width: 960px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
-    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-muted); text-decoration: none; font-size: 0.9rem; margin-bottom: 2rem; }
-    .back-link:hover { color: var(--text); }
-    header { margin-bottom: 2rem; }
-    .logo { font-family: 'Fraunces', serif; font-size: 1.75rem; font-weight: 600; margin-bottom: 0.5rem; }
-    .app-id { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; }
-    .badge { display: inline-block; background: var(--accent-soft); color: var(--accent); font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.6rem; border-radius: 6px; text-transform: uppercase; }
-    .meta { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem; }
-    .play-cta { margin-top: 1.5rem; }
-    .play-cta a { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.25rem; background: var(--accent); color: #fff; font-weight: 600; border-radius: 10px; text-decoration: none; transition: opacity 0.2s; }
-    .play-cta a:hover { opacity: 0.95; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background-color: var(--bg);
+      background-image: var(--bg-gradient);
+      background-attachment: fixed;
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Outfit', sans-serif;
+      line-height: 1.2;
+    }
+
+    a { text-decoration: none; color: inherit; transition: 0.3s ease; }
+    ul { list-style: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Header */
+    header {
+      padding: 2rem 0;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+    }
+    
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      backdrop-filter: blur(10px);
+      padding: 0.5rem 1rem;
+      border-radius: 99px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+    }
+
+    .back-link:hover {
+      background: var(--surface-hover);
+      color: var(--text);
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      padding-top: 180px;
+      padding-bottom: 100px;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: var(--primary);
+      filter: blur(150px);
+      opacity: 0.15;
+      z-index: -1;
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .app-logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 30px;
+      margin: 0 auto 2rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      object-fit: cover;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, #fff, #b8b8b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--primary-gradient);
+      color: white;
+      font-weight: 700;
+      padding: 1rem 2.5rem;
+      border-radius: 99px;
+      font-size: 1.1rem;
+      box-shadow: var(--glow);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
+    }
+    
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .stat-item i { color: var(--secondary); }
+
+    /* Screenshot Showcase */
+    .showcase {
+      margin-top: -50px;
+      margin-bottom: 100px;
+      position: relative;
+    }
+    
+    .screenshots-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      perspective: 1000px;
+    }
+
+    .screenshot-card {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 8px solid #2a2a2a;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      background: #000;
+      transform: rotateY(5deg) rotateX(2deg);
+      transition: transform 0.5s ease;
+    }
+
+    .screenshot-card:nth-child(2) {
+      transform: rotateY(-5deg) rotateX(2deg);
+      margin-top: 40px;
+    }
+
+    .screenshot-card:hover {
+      transform: rotateY(0) rotateX(0) scale(1.02);
+      z-index: 2;
+    }
+
+    /* Games Grid */
+    .games-section {
+      padding: 80px 0;
+      background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.5));
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .game-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2rem;
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .game-card:hover {
+      border-color: rgba(139, 92, 246, 0.5);
+      transform: translateY(-5px);
+      background: var(--surface-hover);
+    }
+    
+    .game-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .card-tic .game-icon { color: #f43f5e; background: rgba(244, 63, 94, 0.1); }
+    .card-connect .game-icon { color: #facc15; background: rgba(250, 204, 21, 0.1); }
+    .card-dots .game-icon { color: #06b6d4; background: rgba(6, 182, 212, 0.1); }
+
+    .game-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .game-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Features Grid */
+    .features-section {
+      padding: 80px 0;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature-item {
+      text-align: center;
+      padding: 2rem;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid transparent;
+      transition: 0.3s;
+    }
+
+    .feature-item:hover {
+      border-color: var(--border);
+      background: var(--surface);
+    }
+
+    .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+      background: -webkit-linear-gradient(var(--secondary), var(--primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .feature-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+    
+    .feature-text {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Educational Section */
+    .edu-section {
+      padding: 80px 0;
+      background: rgba(139, 92, 246, 0.05);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    
+    .edu-content h2 {
+      font-size: 2.25rem;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(to right, #fff, #cecece);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .skill-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    
+    .skill-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 500;
+    }
+    
+    .skill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--secondary);
+      box-shadow: 0 0 10px var(--secondary);
+    }
+
+    /* Footer */
+    footer {
+      padding: 60px 0 30px;
+      border-top: 1px solid var(--border);
+      background: #000;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Fraunces', serif;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+    
+    .copyright {
+      color: #555;
+      font-size: 0.85rem;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
+      .screenshots-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .screenshot-card:nth-child(2) { margin-top: 0; transform: none; }
+      .screenshot-card { transform: none; }
+      .two-col-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .game-card { text-align: left; }
+    }
   </style>
 </head>
 <body>
-  <div class="page">
-    <nav><a class="back-link" href="../../">← All apps</a></nav>
-    <header>
-      <h1 class="logo">Game Zone — 2 Player Games</h1>
-      <div class="app-id">com.dhaval.twoplayergames</div>
-      <span class="badge">Closed testing</span>
-      <div class="meta">Feb 3, 2026 · 0</div>
-      <div class="play-cta">
-        <a href="https://play.google.com/store/apps/details?id=com.dhaval.twoplayergames" target="_blank" rel="noopener noreferrer" title="Get Game Zone on Google Play">Get it on Google Play</a>
+
+  <header>
+    <div class="container nav-content">
+      <a href="../../" class="back-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+        All Apps
+      </a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <img src="images/app-icon.jpg" alt="Game Zone Icon" class="app-logo">
+      <h1>Game Zone</h1>
+      <p>The Ultimate 2-Player Games Collection! Play classic offline games with friends and family. No internet, no ads, just pure fun.</p>
+      
+      <div class="cta-wrapper">
+        <a href="https://play.google.com/store/apps/details?id=com.dhaval.twoplayergames" target="_blank" class="download-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+          Download on Google Play
+        </a>
       </div>
-    </header>
-  </div>
-  <script src="../../js/config.js"></script>
-  <script src="../../js/analytics.js"></script>
+
+      <div class="hero-stats">
+        <div class="stat-item"><span>✨ 100% Free</span></div>
+        <div class="stat-item"><span>🚀 No Ads</span></div>
+        <div class="stat-item"><span>🌐 Offline Play</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="showcase">
+    <div class="container">
+      <div class="screenshots-grid">
+        <div class="screenshot-card">
+          <img src="images/screenshot-1.jpg" alt="Game Zone Screenshot 1">
+        </div>
+        <div class="screenshot-card">
+          <img src="images/screenshot-2.jpg" alt="Game Zone Screenshot 2">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="games-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Games Included</h2>
+        <p class="section-desc">Rediscover timeless classics reimagined with modern aesthetics.</p>
+      </div>
+
+      <div class="games-grid">
+        <!-- Tic Tac Toe -->
+        <div class="game-card card-tic">
+          <div class="game-icon">⭕</div>
+          <h3 class="game-title">Tic Tac Toe</h3>
+          <p class="game-desc">The timeless classic! Be the first to get three in a row on a 3x3 grid. Simple rules, endless strategy.</p>
+        </div>
+
+        <!-- Connect Four -->
+        <div class="game-card card-connect">
+          <div class="game-icon">🔴</div>
+          <h3 class="game-title">Connect Four</h3>
+          <p class="game-desc">Drop colored discs into the 7×6 grid. Connect four in a row horizontally, vertically, or diagonally to win.</p>
+        </div>
+
+        <!-- Dots & Boxes -->
+        <div class="game-card card-dots">
+          <div class="game-icon">📦</div>
+          <h3 class="game-title">Dots & Boxes</h3>
+          <p class="game-desc">Connect dots to create boxes. The player who completes the most boxes wins! Strategic and competitive.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Amazing Features</h2>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-item">
+          <span class="feature-icon">🎨</span>
+          <h3 class="feature-title">Beautiful Design</h3>
+          <p class="feature-text">Stunning gradients, smooth animations, and a premium interface.</p>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">📳</span>
+          <h3 class="feature-title">Haptic Feedback</h3>
+          <p class="feature-text">Feel every move with enhanced tactile feedback on supported devices.</p>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">⚡</span>
+          <h3 class="feature-title">Fast & Smooth</h3>
+          <p class="feature-text">Instant response and buttery-smooth gameplay without lag.</p>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">📊</span>
+          <h3 class="feature-title">Score Tracking</h3>
+          <p class="feature-text">Keep track of your wins and losses to see who is the champion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="edu-section">
+    <div class="container two-col-grid">
+      <div class="edu-content">
+        <h2>More Than Just Fun</h2>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Game Zone isn't just about entertainment. Our games are designed to challenge your mind and help develop essential cognitive skills for all ages.</p>
+        
+        <div class="skill-list">
+          <div class="skill-item"><span class="skill-dot"></span>Strategic Thinking</div>
+          <div class="skill-item"><span class="skill-dot"></span>Pattern Recognition</div>
+          <div class="skill-item"><span class="skill-dot"></span>Problem Solving</div>
+          <div class="skill-item"><span class="skill-dot"></span>Decision Making</div>
+          <div class="skill-item"><span class="skill-dot"></span>Planning Ahead</div>
+          <div class="skill-item"><span class="skill-dot"></span>Patience & Focus</div>
+        </div>
+      </div>
+      <div class="edu-image">
+         <!-- Abstract visual or just spacing if no extra image -->
+         <div style="background: linear-gradient(45deg, var(--surface), transparent); border-radius: 24px; padding: 2rem; border: 1px solid var(--border);">
+            <h3 style="margin-bottom: 1rem;">Perfect For</h3>
+            <ul style="color: var(--text-muted); display: grid; gap: 1rem;">
+              <li>👨‍👩‍👧‍👦 Family game nights</li>
+              <li>✈️ Long trips and flights</li>
+              <li>🤝 Playing with friends</li>
+              <li>🏫 Kids learning strategy</li>
+              <li>🕰️ Waiting rooms</li>
+            </ul>
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-logo">Game Zone</div>
+      <div class="footer-links">
+        <a href="mailto:drdhavaltrivedi5@gmail.com">Contact Support</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <p class="copyright">Made with ❤️ for game lovers everywhere. &copy; 2026</p>
+    </div>
+  </footer>
+
 </body>
 </html>

@@ -3,266 +3,326 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AppStream — All Apps | Meditation, AI & Games</title>
-  <meta name="description" content="AppStream lists Breath (Meditation & Wellness), Empathy AI, and Game Zone (2 Player Games). Discover and track our apps in closed testing.">
-  <meta name="keywords" content="AppStream, Breath meditation, Empathy AI, Game Zone, 2 player games, wellness app, Android apps">
-  <meta name="author" content="AppStream">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://dhaval1mak.github.io/AppStream/">
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://dhaval1mak.github.io/AppStream/">
-  <meta property="og:title" content="AppStream — All Apps">
-  <meta property="og:description" content="Breath, Empathy AI, Game Zone. For all apps listing.">
-  <meta property="og:image" content="https://dhaval1mak.github.io/AppStream/og-image.png">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:site_name" content="AppStream">
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AppStream — All Apps">
-  <meta name="twitter:description" content="Breath, Empathy AI, Game Zone. For all apps listing.">
-  <meta name="twitter:image" content="https://dhaval1mak.github.io/AppStream/og-image.png">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "name": "AppStream",
-        "url": "https://dhaval1mak.github.io/AppStream/",
-        "description": "For all apps listing. Breath, Empathy AI, Game Zone.",
-        "publisher": { "@type": "Organization", "name": "AppStream" }
-      },
-      {
-        "@type": "ItemList",
-        "name": "AppStream Apps",
-        "description": "List of apps",
-        "numberOfItems": 3,
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Breath — Meditation & Wellness", "url": "https://dhaval1mak.github.io/AppStream/apps/breath/" },
-          { "@type": "ListItem", "position": 2, "name": "Empathy AI", "url": "https://dhaval1mak.github.io/AppStream/apps/empathy-ai/" },
-          { "@type": "ListItem", "position": 3, "name": "Game Zone — 2 Player Games", "url": "https://dhaval1mak.github.io/AppStream/apps/game-zone/" }
-        ]
-      }
-    ]
-  }
-  </script>
+  <title>AppStream - Innovative Digital Experiences</title>
+  <meta name="description" content="Discover AppStream's suite of innovative applications. From mindfulness and wellness with Breath to entertainment with Game Zone and AI solutions.">
+  <meta name="google-site-verification" content="EwpHhe-oqJrfJuXmExsUmkEVMCemxNDeeKQi708qQiU" />
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
   <style>
     :root {
-      --bg: #0f0f0f;
-      --surface: #1a1a1a;
-      --surface-hover: #242424;
-      --text: #f5f5f5;
-      --text-muted: #a3a3a3;
-      --accent: #22c55e;
-      --accent-soft: rgba(34, 197, 94, 0.15);
-      --border: #2a2a2a;
-      --radius: 16px;
-      --radius-sm: 10px;
+      --bg: #000000;
+      --surface: #0a0a0a;
+      --surface-hover: #161616;
+      --text: #ffffff;
+      --text-muted: #888888;
+      --primary: #ffffff;
+      --border: #222222;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: 'DM Sans', system-ui, sans-serif;
-      background: var(--bg);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background-color: var(--bg);
       color: var(--text);
+      line-height: 1.6;
       min-height: 100vh;
-      line-height: 1.5;
+      overflow-x: hidden;
     }
 
-    .page {
-      max-width: 960px;
+    .container {
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 3rem 1.5rem 4rem;
+      padding: 0 2rem;
     }
 
+    /* Header */
     header {
-      text-align: center;
-      margin-bottom: 3.5rem;
+      padding: 2rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .logo {
-      font-family: 'Fraunces', serif;
-      font-size: 2rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.5rem;
       font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 6rem 0 4rem;
+    }
+
+    .hero h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(to right, #fff, #cbd5e1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       letter-spacing: -0.02em;
-      margin-bottom: 0.5rem;
     }
 
-    .tagline {
+    .hero p {
+      font-size: 1.25rem;
       color: var(--text-muted);
-      font-size: 1rem;
-      font-weight: 500;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
-    .apps {
+    /* Apps Grid */
+    .apps-section {
+      padding: 4rem 0 6rem;
+    }
+
+    .grid {
       display: grid;
-      gap: 1.25rem;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
     }
 
     .app-card {
-      background: var(--surface);
+      background: rgba(30, 41, 59, 0.4);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem 1.75rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      align-items: center;
-      transition: background 0.2s, border-color 0.2s;
+      border-radius: 24px;
+      padding: 6px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      height: 100%;
     }
 
     .app-card:hover {
-      background: var(--surface-hover);
-      border-color: #333;
+      transform: translateY(-5px);
+      border-color: rgba(99, 102, 241, 0.3);
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
     }
 
-    .app-card-main {
-      color: inherit;
-      text-decoration: none;
-      flex: 1;
-      min-width: 0;
+    .card-inner {
+      background: var(--surface);
+      border-radius: 20px;
+      padding: 2rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
     }
 
-    .play-link {
-      display: inline-flex;
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+
+    .app-icon-wrapper {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0.5rem 1rem;
-      background: var(--accent);
-      color: #fff;
-      font-size: 0.85rem;
-      font-weight: 600;
-      border-radius: var(--radius-sm);
-      text-decoration: none;
-      white-space: nowrap;
-      transition: opacity 0.2s, transform 0.15s;
+      font-size: 1.75rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255,255,255,0.05);
     }
 
-    .play-link:hover {
-      opacity: 0.95;
-      transform: translateY(-1px);
+    .app-icon-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      object-fit: cover;
     }
 
-    .play-link:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
-
-    .app-info h2 {
-      font-family: 'Fraunces', serif;
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-    }
-
-    .app-id {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      font-weight: 500;
-      margin-bottom: 0.75rem;
-    }
-
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    .meta span {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
-
-    .badge {
-      display: inline-block;
-      background: var(--accent-soft);
-      color: var(--accent);
+    .status-badge {
       font-size: 0.75rem;
       font-weight: 600;
-      padding: 0.25rem 0.6rem;
-      border-radius: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
+      padding: 0.25rem 0.75rem;
+      border-radius: 99px;
+      background: rgba(99, 102, 241, 0.1);
+      color: #818cf8;
+      border: 1px solid rgba(99, 102, 241, 0.2);
     }
 
-    .stat {
+    .app-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .app-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+      flex-grow: 1;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    
+    .view-link {
       font-weight: 600;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .view-link svg {
+      transition: transform 0.2s;
+    }
+
+    .app-card:hover .view-link svg {
+      transform: translateX(4px);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 4rem 0;
+      border-top: 1px solid var(--border);
+      margin-top: auto;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-links a {
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+
+    .social-links a:hover {
       color: var(--text);
     }
 
-    @media (max-width: 640px) {
-      .play-link { width: 100%; }
-
-      .page {
-        padding: 2rem 1rem 3rem;
-      }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
     }
   </style>
 </head>
 <body>
-  <div class="page">
-    <header>
-      <h1 class="logo">AppStream</h1>
-      <p class="tagline">For all apps listing</p>
-    </header>
 
-    <section class="apps" aria-label="Apps list">
-      <article class="app-card">
-        <a href="apps/breath/" class="app-card-main" title="Breath — Meditation & Wellness">
-          <div class="app-info">
-            <h2>Breath — Meditation & Wellness</h2>
-            <div class="app-id">com.dhaval29.breath</div>
-            <div class="meta">
-              <span class="stat">0</span>
-              <span><span class="badge">Closed testing</span></span>
-              <span>Feb 4, 2026</span>
-            </div>
-          </div>
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.dhaval29.breath" class="play-link" target="_blank" rel="noopener noreferrer" title="Get Breath on Google Play">Google Play</a>
-      </article>
+  <header class="container">
+    <div class="logo">
+      <img src="favicon.svg" alt="AppStream Logo" class="logo-icon">
+      AppStream
+    </div>
+  </header>
 
-      <article class="app-card">
-        <a href="apps/empathy-ai/" class="app-card-main" title="Empathy AI">
-          <div class="app-info">
-            <h2>Empathy AI</h2>
-            <div class="app-id">com.brilworksdigital.VoxAi</div>
-            <div class="meta">
-              <span class="stat">5</span>
-              <span><span class="badge">Closed testing</span></span>
-              <span>Feb 2, 2026</span>
-            </div>
-          </div>
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.brilworksdigital.VoxAi" class="play-link" target="_blank" rel="noopener noreferrer" title="Get Empathy AI on Google Play">Google Play</a>
-      </article>
-
-      <article class="app-card">
-        <a href="apps/game-zone/" class="app-card-main" title="Game Zone — 2 Player Games">
-          <div class="app-info">
-            <h2>Game Zone — 2 Player Games</h2>
-            <div class="app-id">com.dhaval.twoplayergames</div>
-            <div class="meta">
-              <span class="stat">0</span>
-              <span><span class="badge">Closed testing</span></span>
-              <span>Feb 3, 2026</span>
-            </div>
-          </div>
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.dhaval.twoplayergames" class="play-link" target="_blank" rel="noopener noreferrer" title="Get Game Zone on Google Play">Google Play</a>
-      </article>
+  <main>
+    <section class="hero container">
+      <h1>Building Digital <br> Experiences That Matter.</h1>
+      <p>A collection of innovative applications designed to enhance your life, from mindfulness to entertainment and AI-powered solutions.</p>
     </section>
-  </div>
-  <script src="js/config.js"></script>
-  <script src="js/analytics.js"></script>
+
+    <section class="apps-section container">
+      <div class="grid">
+        
+        <!-- Breath App -->
+        <a href="apps/breath/" class="app-card">
+          <div class="card-inner">
+            <div class="card-header">
+              <div class="app-icon-wrapper">
+                <img src="apps/breath/images/icon.png" alt="Breath" class="app-icon-img" onerror="this.style.display='none';this.parentElement.innerHTML='🫁'">
+              </div>
+              <span class="status-badge">Wellness</span>
+            </div>
+            <h3 class="app-title">Breath</h3>
+            <p class="app-desc">Your personal breathing coach. Reduce stress and anxiety with guided breathing exercises rooted in science.</p>
+            <div class="card-footer">
+              <span class="view-link">
+                View App 
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Empathy AI -->
+        <a href="apps/empathy-ai/" class="app-card">
+          <div class="card-inner">
+            <div class="card-header">
+              <div class="app-icon-wrapper" style="color: #a855f7; background: rgba(168, 85, 247, 0.1);">
+                🤖
+              </div>
+              <span class="status-badge">AI Tool</span>
+            </div>
+            <h3 class="app-title">Empathy AI</h3>
+            <p class="app-desc">Advanced conversational AI designed to understand context and emotion. The future of digital interaction.</p>
+            <div class="card-footer">
+              <span class="view-link">
+                View App 
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Game Zone -->
+        <a href="apps/game-zone/" class="app-card">
+          <div class="card-inner">
+            <div class="card-header">
+              <div class="app-icon-wrapper">
+                <img src="apps/game-zone/images/app-icon.jpg" alt="Game Zone" class="app-icon-img" onerror="this.style.display='none';this.parentElement.innerHTML='🎮'">
+              </div>
+              <span class="status-badge">Games</span>
+            </div>
+            <h3 class="app-title">Game Zone</h3>
+            <p class="app-desc">The ultimate offline 2-player games collection. Tic Tac Toe, Connect 4, and more. No ads, just fun.</p>
+            <div class="card-footer">
+              <span class="view-link">
+                View App 
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="social-links">
+        <a href="#">GitHub</a>
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2026 AppStream. All rights reserved.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
