@@ -4,6 +4,6 @@
  * Set TRACKING_ENDPOINT to your API that receives tracking payloads (optional).
  */
 window.APPSTREAM_CONFIG = {
-  SITE_URL: 'https://dhaval1mak.github.io/AppStream',
+  SITE_URL: 'https://appstream.me',
   TRACKING_ENDPOINT: '/api/track'
 };

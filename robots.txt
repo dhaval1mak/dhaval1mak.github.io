@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dhaval1mak.github.io/AppStream/sitemap.xml
+Sitemap: https://appstream.me/sitemap.xml
